@@ -5,6 +5,7 @@ font-family: 'Poppins', sans-serif;
 box-sizing:border-box;
 margin:0;
 padding:0;
+scroll-behavior: smooth;
 }
 
 :root {
@@ -361,7 +362,7 @@ background:var(--black);
     margin-top: 20px;
 }
 
-.contact .contactForm .row input , textarea{
+.contact .contactForm .row input , .contact .contactForm .row2 textarea{
     width: 100%;
     padding:  10px;
     border:  1px solid var(--black);
@@ -370,6 +371,41 @@ background:var(--black);
     color:  var(--black);
     font-size: 16px;
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact .contactForm .row2 textarea{
+    height: 200px;
+}
+
+::placeholder{
+    color: var(--black);
+}
+
+footer{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F9F9F9;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+footer .footerMenu{
+    display: flex;
+}
+
+footer .footerMenu li{
+    list-style: none;
+}
+
+footer .footerMenu li a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    color: var(--black);
     text-transform: uppercase;
     letter-spacing: 2px;
 }

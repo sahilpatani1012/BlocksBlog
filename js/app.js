@@ -1,6 +1,10 @@
 const navigation = document.querySelector('.navigation');
 const menuToggle = document.querySelector('.menuToggle');
 const bodyToggle = document.querySelector('body');
+var home = document.querySelectorAll('.navigation ul li a');
+// const about = document.querySelector('.navigation ul li a #about');
+// const post = document.querySelector('.post');
+// const contact = document.querySelector('.contact');
 // for the menu toggle
 menuToggle.onclick = function () {
     menuToggle.classList.toggle('active')
@@ -13,3 +17,11 @@ window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
 })
+//closing menu on click...
+for (var i = 0; i < home.length; i++) {
+    home[i].onclick = function () {
+        menuToggle.classList.remove('active');
+        navigation.classList.remove('active');
+        bodyToggle.classList.toggle('active'); //litlle messy ;;
+    }
+}
