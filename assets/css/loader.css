@@ -1,0 +1,28 @@
+.loaderbox{
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 7px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.loader{
+    width:  60%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50px;
+    background: rgba(0,0,0,.41);
+    left: 0%;
+    animation: loader 1.3s ease-in-out infinite alternate;
+}
+@keyframes loader{
+    0%{
+        left: -1%;
+    }
+    100%{
+        left: 41%;
+    }
+}
