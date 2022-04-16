@@ -80,9 +80,45 @@ text-transform:uppercase;
 letter-spacing:2px;
 }
 
-.menuToggle {
+.btn {
+border-radius:.2em;
+position:relative;
+display:inline-block;
+border:2px solid var(--black);
+color:var(--black);
+transition:.35s;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+letter-spacing:2px;
+text-transform:uppercase;
+padding:8px 20px;
+}
+
+.btn:hover {
+color:var(--white);
+background:var(--black);
+}
+
+header .btn{
+background:url(../images/enter.png);
+background-size:27px;
 display:flex;
 margin-left:auto;
+margin-right: 25px;
+padding:13.5px;
+margin-top: 2px;
+border:none;
+cursor: pointer;
+}
+
+header .btn.active{
+background:url(../images/user-interface.png);
+background-size:27px;
+}
+
+.menuToggle {
+display:flex;
 position:relative;
 width:30px;
 height:30px;
@@ -196,25 +232,8 @@ text-align:center;
 text-transform:uppercase;
 }
 
-.btn {
-border-radius:.2em;
-position:relative;
-display:inline-block;
-border:2px solid var(--black);
-color:var(--black);
-text-decoration:none;
-font-size:18px;
-font-weight:600;
-letter-spacing:2px;
-text-transform:uppercase;
-transition:.35s;
-margin:20px 0 0;
-padding:8px 20px;
-}
-
-.btn:hover {
-color:var(--white);
-background:var(--black);
+.banner .btn {
+margin: 20px 0 0;
 }
 
 .title{
@@ -330,6 +349,10 @@ background:var(--black);
     color: var(--black);
     font-weight: 300;
     font-size: 1em;
+}
+
+.post .title .btn{
+    margin: 20px 0 0;
 }
 
 .contact{
