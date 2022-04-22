@@ -217,6 +217,15 @@
                 <a href="#" class="btn">Load More</a>
             </div>
         </section>
+
+<div class="demo-render">
+    <% let postList = posts %> 
+    <% for(let i = postList.length - 1;i>=0;i--){ %>
+        <h1><%= postList[i].postTitle %> </h1> 
+        <p><%= postList[i].postContent %> </p>
+    <% } %> 
+</div>
+
         <!-- Contact -->
         <section class="contact" id="contact">
             <div class="title">
