@@ -5,13 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlocksBlog</title>
-<<<<<<< HEAD:index.html
-    <link rel='stylesheet' type="text/css" href="css/style.css" />
-    <link rel='stylesheet' href="css/loader.css" />
-=======
     <link rel='stylesheet' type="text/css" href="/assets/css/style.css" />
     <link rel='stylesheet' href="/assets/css/loader.css">
->>>>>>> ede86cdea71bed9a7ab53e70be555acfc6b29e5f:views/index.ejs
 </head>
 
 <body>
@@ -21,7 +16,6 @@
     <div class="main">
         <header>
             <a href="#" class="logo">Blocks</a>
-            <button class="btn"></button>
             <div class="menuToggle"></div>
         </header>
         <!-- Menu items -->
@@ -223,6 +217,15 @@
                 <a href="#" class="btn">Load More</a>
             </div>
         </section>
+
+<div class="demo-render">
+    <% let postList = posts %> 
+    <% for(let i = postList.length - 1;i>=0;i--){ %>
+        <h1><%= postList[i].postTitle %> </h1> 
+        <p><%= postList[i].postContent %> </p>
+    <% } %> 
+</div>
+
         <!-- Contact -->
         <section class="contact" id="contact">
             <div class="title">
@@ -248,7 +251,7 @@
         </section>
         <!-- Footer -->
         <footer>
-            <a href="#" class="logo">B&bull;B</a>
+            <a href="#" class="logo">My Blog</a>
             <ul class="footerMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>

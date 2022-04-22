@@ -36,7 +36,7 @@ overflow: hidden; /*caution!jank overflow property here*/
 }
 
 body.active{
-    overflow: overlay;
+overflow: overlay;
 }
 
 header {
@@ -58,15 +58,15 @@ padding:10px 100px;
 }
 
 p{
-    color: var(--black);
-    font-weight: 300;
-    text-align: justify;
+color: var(--black);
+font-weight: 300;
+text-align: justify;
 }
 
 .main{
-    opacity: 0;
-    transition: all 1s ease ;
-    display: none;
+opacity: 0;
+transition: all 1s ease ;
+display: none;
 }
 
 .logo {
@@ -158,6 +158,7 @@ z-index:90;
 clip-path:circle(3000px at 90% -10%);
 pointer-events:all;
 }
+
 .navigation ul li {
 display:flex;
 align-items:center;
@@ -175,7 +176,6 @@ font-weight:400;
 text-decoration:none;
 text-transform:uppercase;
 }
-
 
 section {
 position:relative;
@@ -258,6 +258,7 @@ margin: 20px 0 0;
     max-width: 700px;
     text-align: center;
 }
+
 /*before after dosen't matter here*/
 .title h2::after{
     content: '';
