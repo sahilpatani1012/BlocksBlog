@@ -37,6 +37,7 @@ overflow: hidden; /*caution!jank overflow property here*/
 
 body.active{
     overflow: overlay;
+overflow: overlay;
 }
 
 header {
@@ -58,6 +59,7 @@ padding:10px 100px;
 }
 
 p{
+
     color: var(--black);
     font-weight: 300;
     text-align: justify;
@@ -67,6 +69,17 @@ p{
     opacity: 0;
     transition: all 1s ease ;
     display: none;
+
+color: var(--black);
+font-weight: 300;
+text-align: justify;
+}
+
+.main{
+opacity: 0;
+transition: all 1s ease ;
+display: none;
+
 }
 
 .logo {
@@ -80,9 +93,51 @@ text-transform:uppercase;
 letter-spacing:2px;
 }
 
+
 .menuToggle {
 display:flex;
 margin-left:auto;
+
+.btn {
+border-radius:.2em;
+position:relative;
+display:inline-block;
+border:2px solid var(--black);
+color:var(--black);
+transition:.35s;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+letter-spacing:2px;
+text-transform:uppercase;
+padding:8px 20px;
+}
+
+.btn:hover {
+color:var(--white);
+background:var(--black);
+}
+
+header .btn{
+background:url(../images/enter.png);
+background-size:27px;
+display:flex;
+margin-left:auto;
+margin-right: 25px;
+padding:13.5px;
+margin-top: 2px;
+border:none;
+cursor: pointer;
+}
+
+header .btn.active{
+background:url(../images/user-interface.png);
+background-size:27px;
+}
+
+.menuToggle {
+display:flex;
+
 position:relative;
 width:30px;
 height:30px;
@@ -122,6 +177,7 @@ z-index:90;
 clip-path:circle(3000px at 90% -10%);
 pointer-events:all;
 }
+
 .navigation ul li {
 display:flex;
 align-items:center;
@@ -196,6 +252,7 @@ text-align:center;
 text-transform:uppercase;
 }
 
+
 .btn {
 border-radius:.2em;
 position:relative;
@@ -215,6 +272,10 @@ padding:8px 20px;
 .btn:hover {
 color:var(--white);
 background:var(--black);
+
+.banner .btn {
+margin: 20px 0 0;
+
 }
 
 .title{
@@ -239,6 +300,7 @@ background:var(--black);
     max-width: 700px;
     text-align: center;
 }
+
 /*before after dosen't matter here*/
 .title h2::after{
     content: '';
@@ -330,6 +392,11 @@ background:var(--black);
     color: var(--black);
     font-weight: 300;
     font-size: 1em;
+}
+
+
+.post .title .btn{
+    margin: 20px 0 0;
 }
 
 .contact{
