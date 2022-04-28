@@ -32,7 +32,7 @@ body {
 min-height:150vh;
 transition: all 1s ease-in ;
 background:#F9F9F9;
-overflow: hidden; /*caution!jank overflow property here*/
+overflow: hidden;/*caution!jank overflow property here*/
 }
 
 body.active{
@@ -40,17 +40,15 @@ overflow: overlay;
 }
 
 header {
-position:fixed;
-top:0;
-left:0;
-width:100%;
-display:flex;
-justify-self:space-between;
-align-items:center;
-background:var(--white);
-z-index:100;
-transition:.7ms;
-padding:20px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    z-index: 100;
+    padding: 10px 100px;
 }
 
 header.sticky {
@@ -70,14 +68,17 @@ display: none;
 }
 
 .logo {
-position:relative;
-display:inline-block;
-color:var(--black);
-text-decoration:none;
-font-size:1.5em;
-font-weight:500;
-text-transform:uppercase;
-letter-spacing:2px;
+position: relative;
+    display: inline-block;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: white;
+    border-radius: 2em;
+    padding: 4px;
 }
 
 .btn {
@@ -93,6 +94,7 @@ font-weight:600;
 letter-spacing:2px;
 text-transform:uppercase;
 padding:8px 20px;
+border-radius: 2em;
 }
 
 .btn:hover {
@@ -101,34 +103,42 @@ background:var(--black);
 }
 
 header .btn{
-background:url(../images/enter.png);
-background-size:27px;
-display:flex;
-margin-left:auto;
-margin-right: 25px;
-padding:13.5px;
-margin-top: 2px;
-border:none;
-cursor: pointer;
+background: url(../images/enter.png);
+    background-repeat: no-repeat;
+    background-size: 42px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 25px;
+    padding: 20px;
+    margin-top: 2px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    background-position: -2px -1.2px;
 }
 
 header .btn.active{
-background:url(../images/user-interface.png);
-background-size:27px;
+    background: url(../images/user-interface.png);
+    background-color: white;
+    border-radius: 2em;
+    background-repeat: no-repeat;
+    background-size: 40px;
 }
 
 .menuToggle {
-display:flex;
-position:relative;
-width:30px;
-height:30px;
-background:url(../images/menu.png);
-background-size:27px;
-background-repeat:no-repeat;
-background-position:center;
-cursor:pointer;
-justify-self:space-between;
-align-items:center;
+    display: flex;
+    position: relative;
+    width: 38px;
+    height: 38px;
+    background: url(../images/menu.png);
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    align-items: center;
+    background-color: white;
+    border-radius: 2em;
+    border:2px solid var(--black);
 }
 
 .menuToggle.active {
@@ -137,6 +147,7 @@ background-size:21px;
 background-repeat:no-repeat;
 background-position:center;
 cursor:pointer;
+background-color: white;
 }
 
 .navigation {
@@ -177,6 +188,29 @@ text-decoration:none;
 text-transform:uppercase;
 }
 
+/*.wrapper {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer banner {
+  transform: translateZ(-1px);
+}*/
+
 section {
 position:relative;
 width:100%;
@@ -185,13 +219,21 @@ background:var(--white);
 padding:100px;
 }
 
+.banner .cover {
+border-radius: 0em;
+background-image: url(/assets/images/cube-minimal.jpg);
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
 .cover {
 position:absolute;
-top:0;
-left:0;
 width:100%;
 height:100%;
 object-fit:cover;
+border-radius: 1.2em;
 }
 
 .banner {
@@ -210,8 +252,8 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-border-radius:.3em;
 padding:70px;
+border-radius: 1.5em;
 }
 
 .banner .contentBx h2 {
@@ -269,6 +311,7 @@ margin: 20px 0 0;
     width: 40px;
     height: 6px;
     background: var(--black);
+    border-radius: .5em;
 }
 
 .about .contentBx{
@@ -277,6 +320,7 @@ margin: 20px 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
+    border-radius: 1em;
 }
 
 .about .contentBx .content{
@@ -310,8 +354,25 @@ margin: 20px 0 0;
     margin-top: 20px;
 }
 
+
 .post .contentBx .postColumn .postBx.extraheight{
     height: 650px;
+}
+
+.post .contentBx .postColumn .postBx .titleBx{
+    position: absolute;
+    top:  0;
+    left:  0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-self: flex-end;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    transition: 0.5s;
+    animation: ease-out;
+    visibility: visible;
 }
 
 .post .contentBx .postColumn .postBx .textBx{
@@ -326,7 +387,7 @@ margin: 20px 0 0;
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    transition: 0.25s;
+    transition: 0.5s;
     animation: ease-in;
     opacity: 0;
     visibility: hidden;
@@ -335,6 +396,10 @@ margin: 20px 0 0;
 .post .contentBx .postColumn .postBx:hover .textBx{
     opacity: .85;
     visibility: visible;
+}
+
+.post .contentBx .postColumn .postBx:hover .titleBx{
+    visibility: hidden;
 }
 
 .post .contentBx .postColumn .postBx .textBx h3{
