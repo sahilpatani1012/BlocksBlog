@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlocksBlog | Compose</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlocksBlog | Compose</title>
+  <link rel='stylesheet' type="text/css" href="/assets/css/style.css" />
+  <link rel='stylesheet' href="/assets/css/loader.css">
+</head>
+
+<body>
+  <!-- //Nav bar -->
+  <!-- <div class="loaderbox">
+    <div class="loader"></div>
+  </div>
+  <div class="main">
+    <header>
+      <a href="/" class="logo">Blocks</a>
+      <div class="menuToggle"></div>
+    </header>
+    <!-- Menu items -->
+    <nav class="navigation">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href=" #about">About</a>
+        </li>
+        <li>
+          <a href="#post">Post</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav> -->
+
+    <!-- //NavBar end -->
     <form action="/compose" method="POST">
       <button type="submit">Logout</button>
     </form>
     <form action="/compose1" method="POST">
-        <div class="input-field">
-            <span>Title:</span>
-            <input placeholder="Post title..." name="postTitle" type="text">
-        </div>
-        <div class="input-field">
-            <span>Content:</span>
-            <textarea placeholder="Post content..." name="postContent" id="" cols="30" rows="10"></textarea>
-        </div>
-        <button type="submit">Create Post +</button>
+      <div class="input-field">
+        <span>Title:</span>
+        <input placeholder="Post title..." name="postTitle" type="text">
+      </div>
+      <div class="input-field">
+        <span>Content:</span>
+        <textarea placeholder="Post content..." name="postContent" id="" cols="30" rows="10"></textarea>
+      </div>
+      <button type="submit">Create Post +</button>
     </form>
-  </body>
+
+    <!-- Footer -->
+    <!-- <footer>
+      <a href="#" class="logo">My Blog</a>
+      <ul class="footerMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#post">Post</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </footer> -->
+    <!-- footer end  -->
+
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/loader.js"></script>
+</body>
+
 </html>

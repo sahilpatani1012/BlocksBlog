@@ -5,7 +5,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    height: 7px;
+    height: 15px;
     border-radius: 50px;
     overflow: hidden;
 }
@@ -14,7 +14,7 @@
     height: 100%;
     position: absolute;
     border-radius: 50px;
-    background: rgba(0,0,0,.41);
+    background: rgb(225,225,225);
     left: 0%;
     animation: loader 1.3s ease-in-out infinite alternate;
 }

@@ -35,7 +35,7 @@ connection.connect((error) => {
   if (error) throw error;
   else console.log("Connected to database successfully");
 });
-connection.query("use users");
+connection.query("USE users");
 //CONNECTION INITIALIZED
 
 //POSTS
